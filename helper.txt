@@ -1,7 +1,14 @@
+
+---- For Creating Certificate in Windows System ------
 windows openSSL installers
 
 https://slproweb.com/products/Win32OpenSSL.html
 
+Download : Win64 OpenSSL v3.0.8 Light
+
+install the above package. ***** Note : will inatalling direct all the DLL's to  OpenSSL-Win64/bin   folder.****
+
+Configure the environement variable. :  C:\Program Files\OpenSSL-Win64\bin
 
 ----------------------  server ----------------------
 
