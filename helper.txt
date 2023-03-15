@@ -1,0 +1,32 @@
+windows openSSL installers
+
+https://slproweb.com/products/Win32OpenSSL.html
+
+
+----------------------  server ----------------------
+
+Create key
+------------
+openssl genpkey -out server.pem -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc
+
+Create csr
+-----------
+openssl req -new -key server.pem -out server.csr
+
+Create Certificate
+----------------------
+openssl x509 -req -days 365 -in server.csr -signkey server.pem -out server.crt
+
+
+----------------------  Client ----------------------
+Create key
+------------
+openssl genpkey -out client.pem -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc
+
+Create csr
+-----------
+openssl req -new -key client.pem -out client.csr
+
+Create Certificate
+----------------------
+openssl x509 -req -days 365 -in client.csr -signkey client.pem -out client.crt
